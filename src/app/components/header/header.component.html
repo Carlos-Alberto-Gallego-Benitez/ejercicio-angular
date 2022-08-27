@@ -1,0 +1,73 @@
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <strong>{{data[0].name}}</strong>
+            <div class="imgs">
+                <img [src]="img" alt="" *ngFor="let img of data[0].flickr_images" class="img-properties">
+              </div>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            {{data[0].description}}
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <strong>{{data[1].name}}</strong>
+            <div class="imgs">
+                <img [src]="img" alt="" *ngFor="let img of data[1].flickr_images" class="img-properties">
+              </div>
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            {{data[1].description}}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <strong>{{data[2].name}}</strong>
+            <div class="imgs">
+                <img [src]="img" alt="" *ngFor="let img of data[2].flickr_images" class="img-properties">
+              </div>
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            {{data[2].description}}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+            <strong>{{data[3].name}}</strong>
+            <div class="imgs">
+                <img [src]="img" alt="" *ngFor="let img of data[3].flickr_images" class="img-properties">
+              </div>
+          </button>
+        </h2>
+        <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            {{data[3].description}}
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="wrapper">
+    <div class="gallery">
+      <div class="item" *ngFor="let item of data">
+        <h1>{{ item.name }}</h1>
+        <p>{{ item.description }}</p>
+        <div class="imgs">
+          <img [src]="img" alt="" *ngFor="let img of item.flickr_images">
+        </div>
+      </div>
+    </div>
+  </div>
+  
